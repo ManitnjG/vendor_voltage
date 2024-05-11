@@ -25,7 +25,7 @@ CL_RED="\033[31m"
 CL_GRN="\033[32m"
 
 .PHONY: bacon
-bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
+bacon: $(DEFAULT_GOAL) $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(VOLTAGE_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(VOLTAGE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(VOLTAGE_TARGET_PACKAGE).sha256sum
 	echo -e ${CL_BLD}${CL_RED}"===============================-Package complete-==============================="${CL_RED}

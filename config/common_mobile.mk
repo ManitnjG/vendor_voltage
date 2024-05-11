@@ -1,11 +1,6 @@
 # Inherit common mobile Voltage stuff
 $(call inherit-product, vendor/voltage/config/common.mk)
 
-# Apps
-PRODUCT_PACKAGES += \
-    ExactCalculator \
-    Glimpse
-
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images \

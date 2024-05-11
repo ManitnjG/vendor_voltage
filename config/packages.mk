@@ -7,17 +7,25 @@ PRODUCT_PACKAGES += \
     GmsCompat \
     GameSpace \
     Apps \
-    SetupWizard2 \
+    SetupWizard \
     Jellyfish \
     LogViewer \
     OmniJaws \
     ParallelSpace \
     Gramophone \
-    Seedvault
+    Seedvault \
+    Datura \
+    ExactCalculator \
+    Glimpse
 
 ifeq ($(VOLTAGE_BUILD_TYPE), OFFICIAL)
     PRODUCT_PACKAGES += \
 	Updater
+endif
+
+ifneq ($(PRODUCT_NO_CAMERA),true)
+PRODUCT_PACKAGES += \
+    Aperture
 endif
 
 # BtHelper
